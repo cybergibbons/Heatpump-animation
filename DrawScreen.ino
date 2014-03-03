@@ -92,11 +92,11 @@ void loop()
 	// flow animation - nasty!
 	for (int i=76; i>15; i--)
 		if (!(i%3))
-			glcd.setPixel((i - (animate)),13, WHITE);
+			glcd.setPixel((i - (animate%3)),13, WHITE);
 
 	for (int i=15; i<76; i++)
 		if (!(i%3))
-			glcd.setPixel((i + (animate)),18, WHITE);
+			glcd.setPixel((i + (animate%3)),18, WHITE);
 
 	// "Wall"
 	glcd.drawLine(70,0,70,12,WHITE);
